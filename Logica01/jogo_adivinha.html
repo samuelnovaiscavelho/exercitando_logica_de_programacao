@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+    function pularLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) { //"Frase" é um parametro seria como se fosse uma variavel dentro da função; 
+
+        document.write(frase);
+        pularLinha();
+    }
+
+        //Math.round() = Arredonda
+        //Math.random() = numero aleatorio de 0 a 10 (Tipo Float)
+
+    var numeroPensado = Math.round(Math.random() * 10);
+//  console.log(numeroPensado);
+
+    var tentativas = 1;
+
+
+    while(tentativas <= 3){
+
+        var chute = parseInt(prompt("Digite seu chute! "));
+        
+        if (chute == numeroPensado) {
+
+            mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+            break;
+
+
+
+        } else {
+
+            mostra("Você ERROU!");
+        } 
+
+        tentativas++;
+    
+    }
+
+    mostra("Fim!")
+
+
+</script>
